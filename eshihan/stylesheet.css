@@ -1,0 +1,255 @@
+body {
+  padding-top: 0.5in;
+  padding-bottom: 0.5in; }
+
+p {
+  text-align: justify; }
+
+.container-fluid {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.profile-pic {
+  width: 100px;
+  border: 2px solid #0B5345; }
+
+@media (max-width: 535px) {
+  .xs-center, .xs-center * {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    float: none !important; } }
+
+.name {
+	color: #0B5345;
+	display: inline-block;
+	float: left;
+	font-size: 16pt;
+	line-height: 16pt;
+	text-transform: uppercase; 
+}
+.name .general-role {
+	color: #bbbbbb;
+	font-size: 10pt;
+	margin: 0;
+	line-height: 10pt;
+	text-transform: none; 
+}
+
+.contact-info {
+  color: #0B5345;
+}
+.contact-info a {
+	color: #888888; 
+}
+.contact-info .fa {
+	padding-right: 10px;
+}
+@media (max-width: 535px) {
+.contact-info li {
+  width: 50%;
+  float: left; } }
+
+.tile {
+	page-break-inside: avoid; 
+}
+.tile h2 {
+    font-size: 12pt;
+    line-height: 12pt;
+    position: relative;
+    color: #0B5345;
+    text-transform: uppercase; 
+}
+.tile h2 .text {
+	background-color: #FFF;
+	padding-right: 20px; 
+}
+.tile h2 .fa {
+  border: 2px solid #0B5345;
+  padding: 5px;
+  border-radius: 20px;
+  margin: 0 10px 0 0; 
+}
+.tile h2:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: #0B5345;
+  height: 2px;
+  display: block;
+  top: 10.0pt;
+  z-index: -1; 
+}
+
+.education dt {
+	padding-top: 10px;
+	padding-left: 30px;
+}
+  .education dt:before {
+    color: #ddd;
+    content: "\f0c8";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    margin-left: -30px;
+    width: 25px; 
+}
+.education dt:hover:before{
+	content: "\f0c8";
+	color: #0B5345;	
+}
+.education dt:hover .period {
+	color: #0B5345;
+}	
+.education dd {
+	margin-left: 30px; 
+}
+.education .degree {
+	color: #0B5345;
+	font-size: 10pt; 
+}
+.education .period {
+	color: #bbbbbb;
+	font-size: 9pt; 
+}
+.education .period:before {
+	content: " / ";	
+}
+.experience dt {
+	padding-top: 10px;
+	padding-left: 30px;
+	padding-top: 5px; 
+}
+.experience dt:before {
+	color: #ddd;
+	content: "\f0c8";
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	margin-left: -30px;
+	width: 25px; 
+}
+.experience dt:hover:before {
+	content: "\f0c8";
+	color: #0B5345;
+}
+.experience dt:hover .period {
+	color: #0B5345;
+}	
+.experience dd {
+  margin-left: 30px; }
+.experience .workplace {
+  color: #0B5345;
+  font-size: 10pt; }
+.experience .period {
+  color: #bbbbbb;
+  font-size: 9pt;
+  clear: right; }
+  .experience .period:before {
+    content: " / "; }
+.experience .role {
+  display: block;
+  font-size: 9pt;
+  font-weight: bold; }
+
+.skills dt {
+  font-weight: normal;
+  text-align: left !important;
+  width: 30%;
+  float: left; }
+.skills dd {
+  display: block;
+  width: 70%;
+  float: right; }
+.skills .skill-level {
+  float: right;
+  color: #0B5345; }
+.skills .skill-level .fa {
+	width: 15px; }
+.skills .skill-level .fa.light {
+  color: #daf0fd; }
+
+/* -----------------------------------	   */
+progress {
+  color: #0B5345;
+    font-size: 0.4em;
+    line-height: 1.9em;
+    text-indent: .7em;
+	border: 0px solid #0B5345;
+    width: 40.5em;
+    height: 2.0em;
+}
+progress::-moz-progress-bar { background: #0B5345; }
+progress::-webkit-progress-value { background: #0B5345; }
+
+.h_rate{
+	display: none;
+	color: #fff;
+	position: absolute;
+	left: -39px;
+	background: black;
+	font-size: 11.5px;
+	padding: 1.5px 6px;
+	border-radius: 4px;
+	width: 34px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+.skill-level .h_rate:after {
+	display: none;
+	color: black;
+	font-size: 16px;
+	position: absolute;
+	content: "\f0da";
+	font-family: FontAwesome;
+	left: 33px;
+	top: -1.7px;
+}
+.skill-level{
+	position: relative;
+}	
+.skills dd:hover .h_rate {display: block;}
+.skills dd:hover .h_rate:after {display: block;}
+.do {position: relative;}
+
+.hidden-skill {
+	display: none;
+}
+#left_div h1{margin-left: -75px;}
+/* -----------------------------------	   */
+
+/*--------------------------------------------------------------
+	Print Styles
+--------------------------------------------------------------*/
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    padding: 0 !important; }
+	#left_div h1{margin-left: 0px;}
+
+  a[href]:after {
+    content: ""; }
+
+  .name,
+  .contact-info .fa,
+  .tile .text, .tile .fa:before,
+  .experience .workplace,
+  .education .degree {
+    color: #0B5345 !important; }
+
+  .general-role,
+  .period, .period:before {
+    color: #bbbbbb !important; }
+
+  .tile .text {
+    background: #FFF !important; }
+
+  .skill-level .fa.light:before {
+    color: #daf0fd !important; } 
+	.refer {
+		margin-top: 35px;
+	}
+	.hidden-skill {
+		display: block;
+	}
+}
